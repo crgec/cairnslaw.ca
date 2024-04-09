@@ -15,11 +15,11 @@
         padding: 0;
         width: 100%;
         height: 100%;
+        font-size: 12px;
         font-family: "Aileron", sans-serif;
         color: #00331f;
         background-color: #ffffff;
-        overflow-x: hidden;
-        text-rendering: geometricprecision;
+        text-rendering: optimizeLegibility;
       }
       main {
         flex-direction: column;
@@ -35,7 +35,7 @@
       header h1 {
         font-family: "Source Serif Pro", serif;
         font-weight: 700;
-        font-size: 4rem;
+        font-size: 3.5rem;
         color: #00331f;
       }
       .cta {
@@ -69,6 +69,15 @@
       }
       a {
         color: #00331f;
+      }
+      @media (min-width: 768px) {
+        body,
+        html {
+          font-size: 16px;
+        }
+        main {
+          padding: 4rem;
+        }
       }
     </style>
   </head>
