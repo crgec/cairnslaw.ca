@@ -61,6 +61,10 @@
         border-radius: 0.25rem;
         text-decoration: none;
       }
+      .cta:focus {
+        outline: 3px solid #91ad88;
+        outline-offset: 2px;
+      }
       header p {
         text-align: center;
         margin-top: 0.5rem;
@@ -98,8 +102,11 @@
         color: #00331f;
         text-decoration: none;
       }
-      a:hover {
+      a:hover,
+      a:focus {
         text-decoration: underline;
+        outline: 2px solid #91ad88;
+        outline-offset: 2px;
       }
       .disclaimer {
         margin-top: 0.5rem;
@@ -121,14 +128,15 @@
     </style>
   </head>
   <body>
-    <main>
-      <header>
-        <div class="logo">
+    <main role="main">
+      <header role="banner">
+        <div class="logo" role="img" aria-label="Cairns Law Logo">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="400"
             height="173"
             viewBox="0 0 400 173"
+            aria-hidden="true"
           >
             <!-- Logo -->
             <g id="logo">
@@ -145,7 +153,6 @@
                 d="m188.997 106.769-20.236-20.235 20.236-20.236 20.235 20.236z"
               />
             </g>
-            <!-- Text placed next to the logo -->
             <text
               x="220"
               y="86.534"
@@ -170,38 +177,43 @@
           <a
             href="https://outlook.office365.com/owa/calendar/cairnslaw@kcairns.ca/bookings/"
             class="cta"
+            role="button"
+            aria-label="Request an Appointment - Opens booking calendar"
             >Request an Appointment</a
           >
         </div>
         <p>Meetings are by appointment only.</p>
       </header>
 
-      <section>
-        <h3>Kendall Cairns, B.Comm., B.Ed., J.D.</h3>
-        <dl>
+      <section aria-labelledby="contact-info"></section>
+        <h3 id="contact-info">Kendall Cairns, B.Comm., B.Ed., J.D.</h3>
+        <dl role="list">
           <div>
-            <dt>E</dt>
+            <dt>Email</dt>
             <dd><a href="mailto:hello@cairnslaw.ca">hello@cairnslaw.ca</a></dd>
           </div>
           <div>
-            <dt>P</dt>
+            <dt>Phone</dt>
             <dd><a href="tel:1-780-670-0815">780.670.0815</a></dd>
           </div>
           <div>
-            <dt>F</dt>
+            <dt>Fax</dt>
             <dd><a href="tel:1-780-670-0815">780.670.0815</a></dd>
           </div>
         </dl>
-        <dl class="addresses">
-          <dt>Address</dt>
-          <dd>
-            <a
-              href="https://maps.app.goo.gl/tfCfpTB8JiNAiqq58"
-              target="_blank"
-              rel="noreferrer noopener"
-              >206 Pembina Rd. <br />Sherwood Park, AB T8H 0L8</a
-            >
-          </dd>
+        <dl class="addresses" role="list">
+          <div>
+            <dt>Address</dt>
+            <dd>
+              <a
+                href="https://maps.app.goo.gl/tfCfpTB8JiNAiqq58"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="Office location - Opens in Google Maps"
+                >206 Pembina Rd. <br />Sherwood Park, AB T8H 0L8</a
+              >
+            </dd>
+          </div>
         </dl>
       </section>
     </main>
